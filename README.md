@@ -85,4 +85,5 @@ const x:X = reactive({name:'张三',age:18})
 
 </style>
 ```
+### 2.computed===> coumPuted.vue(计算属性)
 

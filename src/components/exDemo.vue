@@ -12,6 +12,8 @@
         </ul>
         <el-button @click="xiugai">修改</el-button>
     </div>
+    <userInfo></userInfo>
+    <coumPuted></coumPuted>
 </template>
 
 <script setup lang="ts">
