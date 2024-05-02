@@ -13,6 +13,13 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@types/eslint": "^8.56.10",
+    "less": "^4.2.0",
+    "lightningcss": "^1.24.1",
+    "sass": "^1.76.0",
+    "stylus": "^0.63.0",
+    "sugarss": "^4.0.1",
+    "terser": "^5.31.0",
     "vue": "^3.4.21"
   },
   "devDependencies": {
