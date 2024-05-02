@@ -60,7 +60,9 @@ import { ref } from 'vue'
 在快速开始的按需导入
 
 ## 6.基础语法
-### 1.ref 和 reactive
+### 1.ref 和 reactive（响应式数据）
+ref(基本数据类型和对象数据类型)
+reactive(只能定义对象数据类型)
 ```vue
 <template>
     <div>

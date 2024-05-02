@@ -6,7 +6,6 @@
 </template>
 
 <script setup lang="ts">
-import PersionDemo from './components/PersionDemo.vue';
 </script>
 
 <style scoped>
