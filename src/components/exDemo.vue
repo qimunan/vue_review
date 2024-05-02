@@ -7,6 +7,10 @@
             <li v-for="(item,index) in y" :key="index">{{ item.name }}</li>
         </ul>
         <el-button @click="y[0].name='哈哈哈'">修改</el-button>
+        <ul>
+            <li>{{  z.name }}</li>
+        </ul>
+        <el-button @click="xiugai">修改</el-button>
     </div>
 </template>
 
@@ -22,10 +26,16 @@ const x = reactive<X>({
 })
 
 const y = reactive([
-        { id: 1, name: '周舟' },
-        { id: 2, name: '刘晓琪' },
+        { id: 1, name: '周某人' },
+        { id: 2, name: '刘大壮' },
         { id: 3, name: '一辈子' }
     ])
+    const z = reactive(
+        { id: 1, name: '柒木楠' }
+    )
+    const xiugai:Function=()=>{
+        Object.assign(z,{id:2,name:'曦柚'})
+    }
 </script>
 
 <style scoped>
