@@ -5,6 +5,8 @@
         <div>{{ count1 }}</div>
         <el-button @click="count1+=20">+20</el-button>
     </div>
+    <h1>*******</h1>
+    <refDemo></refDemo>
 </template>
 
 <script setup lang="ts">
