@@ -53,8 +53,8 @@ import { ref } from 'vue'
 </style>
 ```
 
-### 5.简单的就是上面这样,顺便进行elment-plus配置
-#### 1.配置
+## 5.简单的就是上面这样,顺便进行elment-plus配置
+### 1.配置
 我们找到element-plus官网查看配置文档，按照按需加载来配置
 [配置地址](https://element-plus.org/zh-CN/guide/quickstart.html)
 在快速开始的按需导入
