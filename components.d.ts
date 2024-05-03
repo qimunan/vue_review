@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     CoumPuted: typeof import('./src/components/coumPuted.vue')['default']
+    ElB: typeof import('element-plus/es')['ElB']
     ElButtom: typeof import('element-plus/es')['ElButtom']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElInput: typeof import('element-plus/es')['ElInput']
@@ -16,5 +17,6 @@ declare module 'vue' {
     PersionDemo: typeof import('./src/components/PersionDemo.vue')['default']
     UserInfo: typeof import('./src/components/userInfo.vue')['default']
     WatchDemo: typeof import('./src/components/watchDemo.vue')['default']
+    WatchEffwct: typeof import('./src/components/watchEffwct.vue')['default']
   }
 }

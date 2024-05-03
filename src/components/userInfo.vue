@@ -8,6 +8,8 @@
         <el-button @click="editAge">修改年龄</el-button>
     </div>
     <watchDemo></watchDemo>
+    <h1>**************</h1>
+    <watchEffwct></watchEffwct>
 </template>
 
 <script setup lang="ts">
