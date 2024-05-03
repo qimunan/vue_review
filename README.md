@@ -213,3 +213,25 @@ watchEffect(() => {
 })
 </script>
 ```
+
+## 7.TS
+### 1.接口
+```ts
+// 接口
+interface Persion {
+    id: number,
+    name: string,
+    age: number
+}
+
+// 自定义类型(泛型)
+// type PersionList = Array<Persion>
+// 自定义类型
+type PersionList = Persion[]
+let a: Persion = { id: 1, name: '张三', age: 60 }
+let b: PersionList = [
+    { id: 1, name: '张三', age: 60 },
+    { id: 2, name: '李四', age: 50 },
+    { id: 3, name: '王五', age: 40 }
+]
+```
