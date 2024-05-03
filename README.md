@@ -85,7 +85,31 @@ const x:X = reactive({name:'张三',age:18})
 
 </style>
 ```
-### 2.computed===> coumPuted.vue(计算属性)
+### 2.computed
+```vue
+<script setup lang="ts">
+
+const firstName = ref<string>('')
+const lastName = ref<string>('')
+// 计算属性，有缓存   
+let fullName = computed({
+    get(){
+        return firstName.value + lastName.value
+    },
+    set(val){
+        console.log(val);
+        const [first, last] = val.split('g')
+        console.log(first, last);
+        
+        firstName.value = first
+        lastName.value = last
+    }
+})
+const edit: Function = () => {
+    fullName.value = 'zhangsan'
+}
+</script>
+```
 
 ### 3.watch
 ```vue
