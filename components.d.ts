@@ -8,8 +8,6 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     CoumPuted: typeof import('./src/components/coumPuted.vue')['default']
-    ElB: typeof import('element-plus/es')['ElB']
-    ElButtom: typeof import('element-plus/es')['ElButtom']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElInput: typeof import('element-plus/es')['ElInput']
     ExDemo: typeof import('./src/components/exDemo.vue')['default']
