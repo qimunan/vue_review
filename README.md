@@ -300,3 +300,48 @@ defineProps<{
 
 </style>
 ```
+
+### 2.子传父
+```vue
+<!-- 父组件father.vue -->
+<template>
+    <div>
+        <h1>父组件</h1>
+        <h1>*********</h1>
+        <Son @message="reson"></Son>
+    </div>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue'
+import Son from './sonS.vue'
+
+const resonvalue = ref<string>('')
+const reson = (msg: string) => {
+    resonvalue.value = msg
+}
+</script>
+
+<style scoped>
+
+</style>
+<!-- 子组件sonS.vue -->
+<template>
+    <div>
+       
+        <h1>子传父</h1>
+        <el-button @click="sendSon">子组件点击</el-button>
+    </div>
+</template>
+
+<script setup lang="ts">
+import { defineEmits } from 'vue'
+
+const emit = defineEmits(['message'])
+const sendSon = () => {
+    emit('message', 'Hello from Child!');
+}
+</script>
+
+<style scoped></style>
+```

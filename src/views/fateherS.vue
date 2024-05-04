@@ -3,7 +3,8 @@
     <div>
         <h1>父组件</h1>
         <h1>*********</h1>
-        <Son :fmsg="fatherMsg"></Son>
+        <p>{{ resonvalue }}</p>
+        <Son :fmsg="fatherMsg" @message="reson"></Son>
     </div>
 </template>
 
@@ -11,6 +12,10 @@
 import { ref } from 'vue'
 import Son from './sonS.vue'
 const fatherMsg = ref<string>('hello world')
+const resonvalue = ref<string>('')
+const reson = (msg: string) => {
+    resonvalue.value = msg
+}
 </script>
 
 <style scoped>
