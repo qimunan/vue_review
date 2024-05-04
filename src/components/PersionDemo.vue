@@ -7,7 +7,7 @@
         <h1 v-if="tel">{{ tel }}</h1>
         <el-button type="primary" @click="editNmae">修改名字</el-button>
         <el-button type="primary" @click="editAge">修改年龄</el-button>
-        <el-button type="primary" @click="showTel">展示联系方式</el-button>
+        <el-button type="primary" @click="showTel">展示境界</el-button>
     </div>
     <newTest></newTest>
 </template>
@@ -21,7 +21,7 @@ const age: Ref<number> = ref(18)
 const tel =ref('')
 
 const showTel:Function = () => {
-    tel.value = '12345678'
+    tel.value = '十洞天合一'
 }
 
 // 他会隐式推导类型，但是我们需要显示标注
@@ -32,11 +32,11 @@ interface X {
 const x:X = reactive({name:'李三',age:28})
 
 const editNmae:Function = () => {
-    name.value = '周某人'
-    x.name = '刘大壮'
+    name.value = '荒'
+    x.name = '云曦'
 }
 const editAge:Function = () => {
-    age.value = 25
+    age.value = 19
     x.age = 22
 }
 </script>

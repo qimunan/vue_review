@@ -28,15 +28,15 @@ const x = reactive<X>({
 })
 
 const y = reactive([
-        { id: 1, name: '周某人' },
-        { id: 2, name: '刘大壮' },
-        { id: 3, name: '一辈子' }
+        { id: 1, name: '石昊' },
+        { id: 2, name: '火灵儿' },
+        { id: 3, name: '荒天帝' }
     ])
     const z = reactive(
-        { id: 1, name: '柒木楠' }
+        { id: 1, name: '荒' }
     )
     const xiugai:Function=()=>{
-        Object.assign(z,{id:2,name:'曦柚'})
+        Object.assign(z,{id:2,name:'云曦'})
     }
 </script>
 
