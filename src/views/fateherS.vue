@@ -11,7 +11,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import Son from './sonS.vue'
-const fatherMsg = ref<string>('hello world')
+const fatherMsg = ref<string>('我是父组件传递消息')
 const resonvalue = ref<string>('')
 const reson = (msg: string) => {
     resonvalue.value = msg
