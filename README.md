@@ -259,3 +259,44 @@ let b: PersionList = [
     { id: 3, name: '王五', age: 40 }
 ]
 ```
+
+## 8.组件通信方式
+### 1.父传子
+```vue
+<!-- 父组件father.vue -->
+<template>
+    <div>
+        <!-- 设置单项绑定a，等于msg -->
+        <son :a="msg"></son>
+    </div>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue'
+import Son from './son.vue'
+const msg = ref<string>('hello world')
+</script>
+
+<style scoped>
+
+</style>
+<!-- 子组件son.vue -->
+<template>
+    <div>
+        <h1>子组件</h1>
+        <!-- 直接渲染a -->
+        <p>{{a}}</p>
+    </div>
+</template>
+
+<script setup lang="ts">
+// 接受父组件的a传过来的值
+defineProps<{
+    a: string
+}>()
+</script>
+
+<style scoped>
+
+</style>
+```

@@ -1,7 +1,8 @@
 <template>
     <div>
+        <h1>TS接口，泛型，自定义类型</h1>
         <h1>{{ a.name }},{{ a.age }},{{ a.id }}</h1>
-        <h1>{{ b[0].name }},{{ b[0].age }},{{ b[0].id }}</h1>
+        <h1>{{ b[1].name }},{{ b[1].age }},{{ b[1].id }}</h1>
     </div>
 </template>
 
