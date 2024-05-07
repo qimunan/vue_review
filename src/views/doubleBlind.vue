@@ -6,7 +6,7 @@ const model = defineModel()
 function update() {
   model.value++
 }
-console.log(model);
+console.log(model)
 </script>
 
 <template>

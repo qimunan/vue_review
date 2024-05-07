@@ -1,23 +1,23 @@
 <template>
-    <div>
-        <h1>子组件</h1>
-        {{ fmsg }}
-        <h1>子传父</h1>
-        <el-button @click="sendSon">子组件点击</el-button>
-        <h1>**********</h1>
-        <v_modelf></v_modelf>
-    </div>
+  <div>
+    <h1>子组件</h1>
+    {{ fmsg }}
+    <h1>子传父</h1>
+    <el-button @click="sendSon">子组件点击</el-button>
+    <h1>**********</h1>
+    <doubleBlinds></doubleBlinds>
+  </div>
 </template>
 
 <script setup lang="ts">
-import v_modelf from "./v_modelF.vue"
+import doubleBlinds from './doubleBlinds.vue'
 defineProps<{
-    fmsg: string
+  fmsg: string
 }>()
 
 const emit = defineEmits(['message'])
 const sendSon = () => {
-    emit('message', '我来自于子组件!');
+  emit('message', '我来自于子组件!')
 }
 </script>
 
