@@ -12,7 +12,9 @@
     "format": "prettier --write src/",
     "prepare": "husky install",
     "lint:lint-staged": "lint-staged",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "add":"git add .",
+    "push":"git push"
   },
   "lint-staged": {
     "*.{js,jsx}": "eslint"
