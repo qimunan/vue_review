@@ -1,11 +1,20 @@
 <template>
-  <div>
-
+  <div id="app">
+    <!-- 路由两种写法 -->
+    <!-- <router-link to="/base">响应式基础</router-link>
+      <router-view></router-view> -->
+    <el-button @click="toRefBase">响应式基础</el-button>
+    <router-view></router-view>
   </div>
 </template>
 
 <script setup lang="ts">
-
+import { useRouter } from 'vue-router'
+const router = useRouter()
+console.log(router);
+const toRefBase = () => {
+  router.push('/base')
+}
 </script>
 
 <style scoped></style>
