@@ -13,8 +13,8 @@
     "prepare": "husky install",
     "lint:lint-staged": "lint-staged",
     "commit": "git-cz",
-    "add":"git add .",
-    "push":"git push"
+    "add": "git add .",
+    "push": "git push"
   },
   "lint-staged": {
     "*.{js,jsx}": "eslint"
@@ -35,7 +35,8 @@
     "stylus": "^0.63.0",
     "sugarss": "^4.0.1",
     "terser": "^5.31.0",
-    "vue": "^3.4.21"
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.2"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^19.2.2",
