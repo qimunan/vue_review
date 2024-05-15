@@ -1,24 +1,30 @@
 <template>
-  <div>
-    <h1>nihao</h1>
-    <PersionDemo></PersionDemo>
-    <h1>*****</h1>
-    <fatherS></fatherS>
-    <p>******</p>
-    <slotS></slotS>
-    <p>父子传值复习</p>
-    <reviewF></reviewF>
-  </div>
+  <el-form ref="queryParamsRef" :model="queryParams" label-width="80px">
+    <el-row>
+      <el-col :span="6">
+        <el-form-item label="编码" prop="code">
+          <BatchInput v-model="queryParams.code"></BatchInput>
+        </el-form-item>
+      </el-col>
+    </el-row>
+    </el-form>
 </template>
 
-<script setup lang="ts">
-import fatherS from './views/fateherS.vue'
-import slotS from './views/slotS.vue'
-import reviewF from './views/reviewF.vue'
-</script>
+<script lang="ts" setup>
+import BatchInput from '@/views/login/BatchInput.vue';
+import { reactive, ref, onMounted, watch, toRefs } from 'vue';
+import type { FormInstance } from 'element-plus';
 
-<style scoped lang="scss">
-h1 {
-  background-color: aquamarine;
-}
-</style>
+const state = reactive({
+  queryParams: <any>{
+    code: '',
+  },
+  queryParamsRef: <FormInstance>{},
+});
+
+const {
+  queryParams,
+  queryParamsRef
+} = toRefs(state);
+
+</script>
