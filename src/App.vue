@@ -5,6 +5,7 @@
       <router-view></router-view> -->
     <el-button @click="toRefBase">响应式基础</el-button>
     <el-button @click="toModel">模版语法</el-button>
+    <el-button @click="toFather">父子传值</el-button>
     <router-view></router-view>
   </div>
 </template>
@@ -18,6 +19,9 @@ const toRefBase = () => {
 }
 const toModel = () => {
   router.push('/model')
+}
+const toFather = () => {
+  router.push('/father')
 }
 </script>
 

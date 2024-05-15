@@ -9,6 +9,10 @@ const router: RouteRecordRaw[] = [
     {
         path: '/model',
         component: () => import('@/views/modelL.vue')
+    },
+    {
+        path: '/father',
+        component: () => import('@/views/fatherS.vue')
     }
 ]
 
