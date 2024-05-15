@@ -1,11 +1,14 @@
 <template>
   <div id="app">
-    <!-- 路由两种写法 -->
-    <!-- <router-link to="/base">响应式基础</router-link>
-      <router-view></router-view> -->
-    <el-button @click="toRefBase">响应式基础</el-button>
-    <el-button @click="toModel">模版语法</el-button>
-    <router-view></router-view>
+    <h1>vue-router</h1>
+    <div class="nav">
+      <router-link to="/home">首页</router-link>
+      <router-link :to="{ name: 'news' }">新闻</router-link>
+      <router-link :to="{ path: '/about' }">关于</router-link>
+    </div>
+    <div class="show">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -13,12 +16,7 @@
 import { useRouter } from 'vue-router'
 const router = useRouter()
 console.log(router);
-const toRefBase = () => {
-  router.push('/base')
-}
-const toModel = () => {
-  router.push('/model')
-}
+
 </script>
 
 <style scoped></style>
