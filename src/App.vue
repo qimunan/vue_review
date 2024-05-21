@@ -1,24 +1,14 @@
 <template>
-  <div>
-    <h1>nihao</h1>
-    <PersionDemo></PersionDemo>
-    <h1>*****</h1>
-    <fatherS></fatherS>
-    <p>******</p>
-    <slotS></slotS>
-    <p>父子传值复习</p>
-    <reviewF></reviewF>
-  </div>
+  <el-input v-model="input" style="width: 240px" placeholder="Please input">
+    <template #suffix>
+      <Plus />
+    </template>
+  </el-input>
 </template>
 
-<script setup lang="ts">
-import fatherS from './views/fateherS.vue'
-import slotS from './views/slotS.vue'
-import reviewF from './views/reviewF.vue'
+<script lang="ts" setup>
+import { ref } from 'vue'
+import { Plus } from '@element-plus/icons-vue'
+const input = ref('')
 </script>
-
-<style scoped lang="scss">
-h1 {
-  background-color: aquamarine;
-}
-</style>
+<style></style>
