@@ -1,30 +1,31 @@
 <template>
-  <el-form ref="queryParamsRef" :model="queryParams" label-width="80px">
-    <el-row>
-      <el-col :span="6">
-        <el-form-item label="编码" prop="code">
-          <BatchInput v-model="queryParams.code"></BatchInput>
-        </el-form-item>
-      </el-col>
-    </el-row>
-    </el-form>
+  <div>
+      <BatchInput v-model="state.billcode"></BatchInput>
+      <uploadTable></uploadTable>
+      <upload></upload>
+  </div>
 </template>
 
-<script lang="ts" setup>
-import BatchInput from '@/views/login/BatchInput.vue';
-import { reactive, ref, onMounted, watch, toRefs } from 'vue';
-import type { FormInstance } from 'element-plus';
-
+<script setup lang="ts">;
+import BatchInput from './views/login/BatchInput.vue'
+import uploadTable from './views/login/uploadTable.vue'
+import upload from './views/login/upload.vue';
+import {reactive, watch } from 'vue'
 const state = reactive({
-  queryParams: <any>{
-    code: '',
-  },
-  queryParamsRef: <FormInstance>{},
-});
+    billcode: ''
+    // textInput: ''
+})
 
-const {
-  queryParams,
-  queryParamsRef
-} = toRefs(state);
+watch(
+    () => state.billcode,
+    value => {
+        state.billcode = value;
+    },
+    { immediate: true }
 
+);
 </script>
+
+<style scoped>
+
+</style>
